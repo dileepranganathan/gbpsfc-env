@@ -47,7 +47,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vm_ip = ips[n]
       vm_index = n+1
       compute.vm.box = "trusty64"
-      compute.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box"
+      compute.vm.box_url = "file://../opscode_ubuntu-14.04_chef-provisionerless.box"
       compute.vm.hostname = "gbpsfc#{vm_index}"
       compute.vm.network "private_network", ip: "#{vm_ip}"
       compute.vm.provider :virtualbox do |vb|
